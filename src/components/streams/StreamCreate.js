@@ -7,7 +7,7 @@ class StreamCreate extends React.Component {
         return (
             <div className="field">
                 <label >{label}</label>
-                <input {...input} />
+                <input {...input} autoComplete="off"/>
                 <div>{meta.error}</div>
             </div>
         )
@@ -29,9 +29,8 @@ class StreamCreate extends React.Component {
 };
 
 const validate = (formValues) => {
-    const errors = {
+    const errors = {};
 
-    }
     if (!formValues.title) {
         errors.title = 'You must enter a title';
     }
